@@ -1,0 +1,1 @@
+window.NV=window.NV||{};NV.$=s=>document.querySelector(s);NV.escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));NV.toast=m=>{const e=NV.$('#toast');e.textContent=m;e.classList.add('show');clearTimeout(NV.toastTimer);NV.toastTimer=setTimeout(()=>e.classList.remove('show'),3000);};
