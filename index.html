@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b18"><meta name="description" content="NeonVoice live voice rooms">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css">
+<title>NeonVoice — Live Voice Rooms</title>
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">N</span><span>Neon<span class="accent">Voice</span></span></a><div class="top-actions"><span class="live-dot"></span><span class="status">VOICE COMMUNITY</span><button class="avatar">U</button></div></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR VOICE. YOUR COMMUNITY.</div><h1>Find your <span>people.</span><br>Join the conversation.</h1><p>Create a room, invite friends, and talk live with people around the world.</p><div class="hero-actions"><button class="primary-btn" id="createRoom">＋ Create a room</button><button class="secondary-btn" id="exploreBtn">Explore rooms ↓</button></div></section>
+<section class="rooms-section" id="roomsSection"><div class="section-heading"><div><div class="eyebrow">HAPPENING RIGHT NOW</div><h2>Live voice rooms <span class="room-count" id="roomCount">0 LIVE</span></h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="gaming">Gaming</button><button class="filter" data-filter="music">Music</button><button class="filter" data-filter="chill">Chill</button></div></div><div class="room-grid" id="roomGrid"></div></section>
+</main>
+<footer><span>© 2026 NeonVoice</span><span>Real conversations, live <b>✦</b></span></footer>
+</div>
+<div class="modal-backdrop hidden" id="roomModal"><form class="modal" id="roomForm"><button type="button" class="modal-close" id="closeModal">×</button><div class="eyebrow">START SOMETHING</div><h2>Create a room</h2><label>Room name<input id="roomName" maxlength="40" placeholder="e.g. Late night gaming" required></label><label>Category<select id="roomCategory"><option value="chill">Chill</option><option value="gaming">Gaming</option><option value="music">Music</option></select></label><label>Your display name<input id="userName" maxlength="20" placeholder="Your name" value="Guest"></label><button class="primary-btn full" type="submit">Create and join</button></form></div>
+<div class="call-panel hidden" id="callPanel"><div class="call-head"><div><div class="eyebrow">YOU ARE IN</div><h2 id="callRoomName">Voice room</h2><p id="callStatus">Connecting…</p></div><button class="call-close" id="leaveCall">×</button></div><div class="call-members" id="callMembers"></div><div class="call-controls"><button id="muteBtn" class="call-control">🎙️ <span>Mute</span></button><button id="hangupBtn" class="hangup">Leave room</button></div><p class="call-note">Allow microphone access when your browser asks.</p></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/socket.io/socket.io.js"></script><script src="js/utils.js"></script><script src="js/audio.js"></script><script src="js/rooms.js"></script><script src="js/ui.js"></script><script src="js/app.js"></script>
+</body></html>
