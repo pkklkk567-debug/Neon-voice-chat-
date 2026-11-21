@@ -1,0 +1,1 @@
+:root{--bg:#090b18;--text:#f5f6ff;--muted:#9299b8;--purple:#9b70ff;--cyan:#36e0d0;--line:rgba(160,170,255,.14);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#21154a 0,transparent 38%),var(--bg);color:var(--text)}button,input,select{font:inherit}button{cursor:pointer}
